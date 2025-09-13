@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(pexels-tara-winstead-8850706.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 380px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ee1f1f;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.6);
+}
+
+button {
+    background: #ee1f1f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1a5fd0;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+li {
+    background: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: #d1ffd1;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-btn {
+    background: orange;
+}
+
+.edit-btn:hover {
+    background: darkorange;
+}
+
+.delete-btn {
+    background: red;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
